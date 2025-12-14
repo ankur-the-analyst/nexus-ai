@@ -1,0 +1,31 @@
+{
+  "name": "nexus-pm-realtime-servers",
+  "version": "1.0.0",
+  "description": "WebSocket and WebRTC signaling servers for Nexus PM System",
+  "main": "websocket-server-example.js",
+  "scripts": {
+    "start:chat": "node websocket-server-example.js",
+    "start:call": "node webrtc-signaling-server.js",
+    "start:all": "concurrently \"npm run start:chat\" \"npm run start:call\"",
+    "dev:chat": "nodemon websocket-server-example.js",
+    "dev:call": "nodemon webrtc-signaling-server.js"
+  },
+  "keywords": [
+    "websocket",
+    "webrtc",
+    "realtime",
+    "chat",
+    "video-call"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "socket.io": "^4.5.4"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.0",
+    "nodemon": "^3.0.1"
+  }
+}
